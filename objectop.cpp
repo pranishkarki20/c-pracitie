@@ -19,7 +19,7 @@ void employee :: setdata( int salarl ){
     
 }
 int main(){ 
-    harry.name =("aam");
+    harry.name =("am");
     harry.setdata(100000);
     harry.getdata();
 }
