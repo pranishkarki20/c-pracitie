@@ -1,31 +1,32 @@
 #include <iostream>
 using namespace std ; 
 
-class students{
-    private :
-    string name;
-    float marks ;
-    char calculategrade(){
-        if (marks >= 90) return 'A';
-        else if (marks >= 75) return 'B';
-        else if (marks >= 50) return 'C';
-        else return 'F';
-    }
-    public :
-        void setdata(string n , int m){
-            name = n ;
-            marks = m ;
-        }
+class bankaccount{
+    private:
+    float balance ; 
+    int accountNumber ;
 
-         void  display(){
-            cout << "Your name is "  << name  << endl ;
-            cout << "The Marks you have obtained is " << marks << endl;
-            cout << "The grade  you have obatined is " << calculategrade() << endl ;
-         
-        }
+    string checkBalance() {
+    if(balance < 500)
+         return "Low Balance" ;
+    else
+        return "Good Balance";
+}
+
+    public:
+    void setdata( float b , int a){
+        balance = b ;
+        accountNumber = a ;
+    }
+    void getdata (){
+        cout << "Your account number  is " << accountNumber << endl;;
+        cout << "Your Balance is " << balance  << endl; ;
+        cout << "Your  Balance condition " << checkBalance() << endl;
+    }
+
 };
 int main(){
-  students s1;
-  s1.setdata( "Ram" , 82);
-  s1.display();
+    bankaccount b1;
+    b1.setdata(1000,9036);
+    b1.getdata();
 }
