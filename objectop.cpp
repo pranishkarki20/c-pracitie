@@ -1,25 +1,27 @@
 #include <iostream>
 using namespace std; 
 
-class employee 
-{
+class student {
     private :
-    int  salarly ;
+    int marks;
+    char calculatorgrade(){                     //pribate funcyion
+        if (marks >= 50 ) return 'p';
+        else return 'f';
+    }
     public :
-    string  name ;
-    char position ;
-    void setdata(int salarl );
-    void getdata(){
-        cout << "the value of a is " << name << endl;
-    };
+     string name ;
 
-} harry ;
-void employee :: setdata( int salarl ){
-     salarly = salarly;
-    
-}
-int main(){ 
-    harry.name =("am");
-    harry.setdata(100000);
-    harry.getdata();
+     void setmarks( int m) {
+        marks = m ;
+     }
+     void getdata(){
+        cout << "marks" << marks << endl;
+        cout << "grade " << calculatorgrade() << endl;
+     }
+} Ram ;
+
+int main (){
+    Ram.name = "Ram";
+    Ram.setmarks (100);
+    Ram.getdata();
 }
